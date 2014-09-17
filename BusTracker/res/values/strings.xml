@@ -6,5 +6,19 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_welcome">Welcome</string>
     <string name="welcome_screen">Welcome To BusTracker</string>
-
+    
+    <!-- tracking option -->
+	<string name="tracking_topic">Tracking Section</string>
+	<string name="track_online">Online Tracking</string>
+	<string name="track_offline">Offline Tracking</string>
+	
+	<!-- help option -->
+	<string name="help">Help</string>
+	
+	<!-- complain section strings -->
+	<string name="cmp_title">Complain Section</string>
+	<string name="cmp_rn">Route Number :</string>
+	<string name="cmp_bn">Bus Number :</string>
+	<string name="desc">Description :</string>
+	
 </resources>

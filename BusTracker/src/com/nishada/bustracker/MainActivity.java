@@ -15,21 +15,61 @@ import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
 
-	Button exit;
+	Button exit, help, complain, time; // for the buttons of option activity
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		exit = (Button) findViewById(R.id.bExit);
+		//each button is initialized
+		exit = (Button) findViewById(R.id.bExit); 
+		help = (Button) findViewById(R.id.bHelp);
+		complain = (Button) findViewById(R.id.bComplain);
+		time = (Button) findViewById(R.id.bTime);
+		
+		//function for the exit button
 		exit.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				finish();
+				finish();  
 			}
 		});
+		
+		// function for the help button
+		help.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent openHelp = new Intent("android.intent.action.HELP");
+				startActivity(openHelp);
+				
+			}
+		});
+		// function for the complain button
+		complain.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent openComplain = new Intent("android.intent.action.COMPLAIN");
+				startActivity(openComplain);
+				
+			}
+		});
+		
+		time.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent openTimeView = new Intent("android.intent.action.TIME");
+				startActivity(openTimeView);
+			}
+		});
+		
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()

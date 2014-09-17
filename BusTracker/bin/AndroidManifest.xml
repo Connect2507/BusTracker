@@ -7,13 +7,16 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
+     <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="true" 
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
       
+   
         
          <activity
             android:name="com.nishada.bustracker.welcome"
@@ -30,6 +33,46 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.OPTIONS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      
+        <activity
+            android:name="com.nishada.bustracker.Help"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.HELP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.nishada.bustracker.Complain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.COMPLAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+               <activity
+            android:name="com.nishada.bustracker.Time"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.TIME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+                     <activity
+            android:name="com.nishada.bustracker.BusTimeViewer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.BUSTIMEVIEWER" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
