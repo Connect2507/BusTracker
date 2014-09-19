@@ -8,6 +8,13 @@
     tools:context="com.nishada.bustracker.MainActivity"
     tools:ignore="MergeRootFrame" >    
     
+      <TextView
+          android:id="@+id/connectionStatus"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:padding="5dp"
+          android:text="connection" />
 
     <Button
         android:id="@+id/bTrack"
@@ -29,13 +36,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="View Bus Time" />
-
-    <Button
-        android:id="@+id/bHelp"
+    
+     <Button
+        android:id="@+id/bFeedback"
         android:layout_width="281dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Help" />
+        android:text="Feedback" />
+
+   
 
     <Button
         android:id="@+id/bExit"

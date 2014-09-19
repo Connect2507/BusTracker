@@ -19,7 +19,7 @@ public class welcome extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcome);
 		
-		Thread timer = new Thread(){
+		Thread timer = new Thread(){ // use a thread to show the start screen for a second
 			public void run(){
 				try{
 					sleep(1000);
